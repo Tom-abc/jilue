@@ -13544,7 +13544,7 @@ const b = 1;
                 player.chooseToDiscard('h', get.prompt2(event.name, trigger.player), c => get.color(c) == 'black')
                   .set('ai', c => {
                     let player = _status.event.player;
-                    let eff = 2.5 * get.effect(player, _status.event.card, _status.event.target, player)
+                    let eff = -2.5 * get.effect(player, _status.event.card, _status.event.target, player)
                     let eff2 = 0;
                     if (get.suit(card) == 'spade') {
                       eff2 = jlsg.getLoseHpEffect(_status.event.target) * get.attitude(player, _status.event.target) / 6;
